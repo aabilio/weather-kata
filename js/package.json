@@ -1,39 +1,52 @@
 {
-  "name": "weather-kata",
-  "version": "1.0.0",
-  "description": "The goal of this kata is to identify the code smells and fix them.",
-  "main": "src/forecast.js",
-  "scripts": {
-    "test": "babel-node node_modules/jasmine/bin/jasmine.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/CodiumTeam/weather-kata.git"
-  },
-  "keywords": [
-    "kata",
-    "refactoring",
-    "code",
-    "smells",
-    "clean",
-    "code",
-    "refactor",
-    "quality"
-  ],
-  "author": "Codium",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CodiumTeam/weather-kata/issues"
-  },
-  "homepage": "https://github.com/CodiumTeam/weather-kata#readme",
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "jasmine": "^3.1.0"
-  },
-  "dependencies": {
-    "babel-polyfill": "^6.26.0",
-    "babel-register": "^6.26.0",
-    "request": "^2.87.0"
-  }
+    "name": "weather-kata",
+    "version": "1.0.0",
+    "description": "The goal of this kata is to identify the code smells and fix them.",
+    "main": "src/forecast.js",
+    "scripts": {
+        "log": "babel-node src/log.js",
+        "test": "babel-node node_modules/jasmine/bin/jasmine.js",
+        "lint": "eslint ./**/*.js"
+    },
+    "pre-commit": [
+        "test",
+        "lint"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/CodiumTeam/weather-kata.git"
+    },
+    "keywords": [
+        "kata",
+        "refactoring",
+        "code",
+        "smells",
+        "clean",
+        "code",
+        "refactor",
+        "quality"
+    ],
+    "author": "Codium",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/CodiumTeam/weather-kata/issues"
+    },
+    "homepage": "https://github.com/CodiumTeam/weather-kata#readme",
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-env": "^1.7.0",
+        "eslint": "^5.0.1",
+        "eslint-config-airbnb": "^17.0.0",
+        "eslint-plugin-import": "^2.13.0",
+        "eslint-plugin-jsx-a11y": "^6.1.0",
+        "eslint-plugin-react": "^7.10.0",
+        "jasmine": "^3.1.0",
+        "lint": "^1.1.2",
+        "pre-commit": "^1.2.2"
+    },
+    "dependencies": {
+        "babel-polyfill": "^6.26.0",
+        "babel-register": "^6.26.0",
+        "request": "^2.87.0"
+    }
 }
